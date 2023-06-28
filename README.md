@@ -1,6 +1,6 @@
 # SweetSpot App
 
-![SweetSpot Logo](./assets/ReadMeLogo.png)
+<img src="./assets/ReadMeLogo.png" alt="SweetSpot Logo" width="50"/>
 This is the SweetSpot application, a React Native app using Expo that displays places where you can buy/eat things like cake, ice cream, donuts etc. on a map using the Foursquare API.
 
 ## Prerequisites
