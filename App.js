@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+
+// Import context providers
+import { FavoritesProvider } from "./contexts/FavoritesContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
+
+import BottomBarNav from "./navigators/BottomBarNavigator";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // Wrap the application with the ThemeProvider and FavoritesProvider, so Theme and Favorites are shared across all screens
+    <ThemeProvider>
+      <FavoritesProvider>
+        <NavigationContainer>
+          <BottomBarNav />
+        </NavigationContainer>
+      </FavoritesProvider>
+    </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
